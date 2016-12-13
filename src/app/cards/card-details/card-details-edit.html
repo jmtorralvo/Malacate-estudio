@@ -1,0 +1,7 @@
+<input type="textarea" ng-model="$resolve.card.description">
+<h5>Inventos:</h5>
+<ul>
+  <li class="detail__invent--linked" ng-repeat="inv in $resolve.card.invention">
+      <input type="text" ng-model="::inv.name">
+  </li>
+</ul>

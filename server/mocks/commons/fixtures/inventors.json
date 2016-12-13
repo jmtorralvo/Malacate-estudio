@@ -1,0 +1,52 @@
+{
+    "inventors": [
+        {
+            "id":"00",
+            "label" : "Alexander Graham Bell",
+            "invention": ["Teléfono", "Audímetro"],
+            "date": "s.XX",
+            "description" : "Alexander Graham Bell fue un científico, inventor y logopeda británico. Contribuyó al desarrollo de las telecomunicaciones y a la tecnología de la aviación.",
+            "thumbnail" : "http://www.desdelaplaza.com/wp-content/uploads/2016/03/Alexander-Graham-Bell.jpg"
+        },
+        {
+            "id":"01",
+            "label" : "Isaac Peral",
+            "invention": ["Submarino"],
+            "date": "s.XIX",
+            "description" : "Isaac Peral y Caballero fue un científico, marino y militar español, teniente de navío de la Armada e inventor del primer submarino torpedero, conocido como el submarino Peral.",
+            "thumbnail" : "https://img.vvlcdn.com/pp/http://www.submarinoperal.com/wp-content/uploads/2013/07/isaac_peral.jpg"
+        },
+        {
+            "id":"02",
+            "label" : "Johannes Gutenberg",
+            "invention": ["Tipos móviles", "Imprenta"],
+            "date": "s.XVI",
+            "description" : "Johannes Gutenberg fue un orfebre alemán, inventor de la prensa de imprenta con tipos móviles moderna. Su trabajo más reconocido es la Biblia de 42 líneas, que se considera el primer libro impreso con tipografía móvil.",
+            "thumbnail" : "http://culturizando.com/wp-content/uploads/2016/02/thumb_640x440_Gutenberg.jpg"
+        },
+        {
+            "id":"03",
+            "label" : "Nikola Tesla",
+            "invention": ["Corriente alterna", "Motor asíncrono", "Campo magnético rotativo", "Tecnología inalámbrica"],
+            "date": "s.XX",
+            "description" : "Nikola Tesla, fue un inventor, ingeniero mecánico, ingeniero eléctrico y físico de origen serbio. ",
+            "thumbnail" : "http://www.bilgingozel.com/modules/mod_image_show_gk4/cache/nikola_tesla_kehanetlerigk-is-617.jpg"
+        },
+        {
+            "id":"04",
+            "label" : "Alessandro Volta",
+            "invention": ["Pila eléctrica"],
+            "date": "s.XVIII",
+            "description" : "Alessandro Giuseppe Antonio Anastasio Volta fue un físico italiano, famoso principalmente por haber desarrollado la pila eléctrica en 1800.",
+            "thumbnail" : "http://www.lasprovincias.es/las_provincias/noticias/201502/18/media/volta.png"
+        },
+        {
+            "id":"05",
+            "label" : "James Watt",
+            "invention": ["Máquina de vapor"],
+            "date": "s.XIX",
+            "description" : "ames Watt fue un ingeniero mecánico e inventor escocés. Las mejoras que realizó en la máquina de Newcomen dieron lugar a la conocida como máquina de vapor de agua, que resultaría fundamental",
+            "thumbnail" : "http://cdn3.dazeinfo.com/wp-content/uploads/2016/01/james.jpeg"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "request": {
+      "url": "^/api/escenario",
+      "method": "GET"
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "latency": 500,
+      "file": "mocks/common/fixtures/mock.json"
+    }
+  }
+]

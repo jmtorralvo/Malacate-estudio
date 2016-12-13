@@ -1,0 +1,58 @@
+{
+  "name": "most-basic-app",
+  "version": "1.0.0",
+  "description": "World's most basic ng1 app",
+  "scripts": {
+    "start": "npm run clean && npm run compile && concurrently \"npm run compile:w\" \"lite-server\" \"npm run server\"",
+    "prestart": "npm install",
+    "server": "cd server && npm start",
+    "compile": "concurrently \"npm run babel\" \"npm run copy\" && npm run bundle",
+    "compile:w": "concurrently \"npm run babel:w\" \"npm run watch\" \"npm run bundle:w\"",
+    "clean": "rimraf src-compiled",
+    "bundle": "webpack ./src-compiled/main.js ./src-compiled/main.bundle.js",
+    "bundle:w": "webpack ./src-compiled/main.js ./src-compiled/main.bundle.js --watch",
+    "babel": "babel src --out-dir src-compiled",
+    "babel:w": "babel src --out-dir src-compiled --watch",
+    "copy": "cpy \"./**/*.*\" \"!./**/*.js\" \"../src-compiled\" --cwd=src --parents",
+    "watch": "npm-watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "watch": {
+    "copy": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "html,css"
+    }
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://aqdes-stash.cm.es/stash/scm/aicli/ng1-best-practices-app.git"
+  },
+  "author": "Bankia",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "https://aqdes-stash.cm.es/stash/projects/AICLI/repos/ng1-best-practices-app/browse",
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0",
+    "concurrently": "^2.2.0",
+    "cpy-cli": "^1.0.1",
+    "lite-server": "^2.2.2",
+    "npm-watch": "^0.1.6",
+    "rimraf": "^2.5.4",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-ui-router": "^0.3.2",
+    "material-design-lite": "^1.2.1"
+  }
+}

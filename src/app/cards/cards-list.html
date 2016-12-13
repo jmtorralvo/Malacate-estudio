@@ -1,0 +1,5 @@
+<h3 class="mdl-layout-title">{{$ctrl.title}}</h3>
+<bk-card-searchbox ng-model="$ctrl.myCustomFilter"></bk-card-searchbox>
+<!-- <h3 class="mdl-layout-alert" ng-if="$ctrl.noResults">No hay ningún resultado que corresponda a su búsqueda</h3> -->
+<bk-card ng-repeat="card in $ctrl.inventors | filter:{ label : $ctrl.myCustomFilter}" ng-model="card" on-change-card="$ctrl.cardChanged(card)">
+</bk-card>

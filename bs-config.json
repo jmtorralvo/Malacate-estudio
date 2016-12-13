@@ -1,0 +1,12 @@
+{
+  "files": [
+    "./src-compiled/**/*.{html, css}",
+    "./src-compiled/main.bundle.js"
+  ],
+  "server": {
+    "baseDir": "./src-compiled",
+    "routes": {
+      "/node_modules": "node_modules"
+    }
+   }
+}

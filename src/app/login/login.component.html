@@ -1,0 +1,13 @@
+<div class="login__wrapper">
+    <form action="" name="loginForm">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" id="user_val" placeholder="Usuario" ng-model="$ctrl.user">
+        </div>
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="password" id="pass_val" placeholder="Contraseña" ng-model="$ctrl.pass">
+        </div>
+    </form>
+    <button class="mdl-button mdl-js-button mdl-button--raised" ng-click="$ctrl.login({foo1: user_val, foo2: pass_val})">
+      Enviar
+    </button>
+</div>

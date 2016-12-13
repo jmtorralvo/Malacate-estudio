@@ -1,0 +1,7 @@
+<p>{{$resolve.card.description}}</p>
+<h5>Inventos:</h5>
+<ul>
+  <li class="detail__invent--linked" ng-repeat="inv in $resolve.card.invention">
+      <a href="">{{inv.name}}</a>
+  </li>
+</ul>

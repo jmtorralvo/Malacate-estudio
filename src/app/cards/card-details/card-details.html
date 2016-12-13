@@ -1,0 +1,22 @@
+<div class="detail__wrapp mdl-grid">
+    <div class="mdl-cell mdl-cell--4-col detail__image--lg" style="background-image: url({{$resolve.card.thumbnail}})"></div>
+    <div class="mdl-cell mdl-cell--8-col">
+        <h3 class="mdl-layout-title">{{$resolve.card.label}} - <span>{{$resolve.card.date}}</span></h3>
+
+        <div ui-view="detailView"></div>
+    
+    </div>
+    <div class="mdl-cell mdl-cell--12-col">
+        <button class="mdl-button mdl-js-button mdl-button--raised">
+              <a ui-sref="cards.list">Volver</a>
+        </button>
+        <button ng-if="!$resolve.card.edit"
+                class="mdl-button mdl-js-button mdl-button--raised">
+              <a ui-sref="cards.details.edit">Editar</a>
+        </button>
+        <button ng-if="$resolve.card.edit"
+                class="mdl-button mdl-js-button mdl-button--raised">
+              <a ui-sref="cards.details.info">Aceptar</a>
+        </button>
+    </div>
+</div>
