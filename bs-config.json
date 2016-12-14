@@ -1,6 +1,6 @@
 {
   "files": [
-    "./src-compiled/**/*.{html, css}",
+    "./src-compiled/**/*.{html,css}",
     "./src-compiled/main.bundle.js"
   ],
   "server": {

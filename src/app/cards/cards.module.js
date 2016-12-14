@@ -1,3 +1,5 @@
+require("./cards.module.scss");
+
 import uiRouter from 'angular-ui-router';
 
 import CardsRoutesConfig from './cards.routes.js';

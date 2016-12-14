@@ -1,3 +1,6 @@
+require("./app.component.scss"); 
+//require('!css-loader!resolve-url-loader!sass-loader?sourceMap!./app.component.scss');
+
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
@@ -7,13 +10,13 @@ import LoginModule from './login/login.module'
 import CardsModule from './cards/cards.module';
 import UserSrv from './shared/user.service';
 
-
 import AppComponent from './app.component';
+
 
 const AppModule = angular
     .module('app', [LoginModule, CardsModule, uiRouter])
     .config(AppRoutesConfig)
-    .component('bkApp', AppComponent)
+    .component('malacateApp', AppComponent)
     .service('UserSrv', UserSrv)
     .value('EventEmitter', payload => ({
         $event: payload
