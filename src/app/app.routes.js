@@ -12,7 +12,7 @@ function config($stateProvider, $urlRouterProvider) {
             url: '/cards',
             templateUrl: './app/cards/cards-main-view.html'
         });
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/home'); 
 }
 
 export default config;
