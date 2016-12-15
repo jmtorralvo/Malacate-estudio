@@ -1,5 +1,5 @@
 // Base Styles
-require("../node_modules/material-design-lite/src/material-design-lite.scss");
+require("bootstrap-grid");
 
 import AppModule from './app/app.module';
 

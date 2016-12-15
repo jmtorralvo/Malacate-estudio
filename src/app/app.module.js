@@ -3,21 +3,18 @@
 
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+/*import bootstrap from 'bootstrap-sass';*/
 
 import AppRoutesConfig from './app.routes.js';
+import HeaderModule from './modules/header/header.module';
 
-import LoginModule from './login/login.module'
-import CardsModule from './cards/cards.module';
-import UserSrv from './shared/user.service';
 
 import AppComponent from './app.component';
 
 
 const AppModule = angular
-    .module('app', [LoginModule, CardsModule, uiRouter])
-    .config(AppRoutesConfig)
+    .module('app', [HeaderModule, uiRouter])
     .component('malacateApp', AppComponent)
-    .service('UserSrv', UserSrv)
     .value('EventEmitter', payload => ({
         $event: payload
     }))
