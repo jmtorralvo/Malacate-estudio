@@ -1,4 +1,4 @@
-require("./app.component.scss"); 
+// require("./app.component.css");
 //require('!css-loader!resolve-url-loader!sass-loader?sourceMap!./app.component.scss');
 
 import angular from 'angular';

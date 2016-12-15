@@ -1,4 +1,4 @@
-require("./cards.module.scss");
+//require("./cards.module.scss");
 
 import uiRouter from 'angular-ui-router';
 

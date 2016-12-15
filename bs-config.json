@@ -1,7 +1,8 @@
 {
   "files": [
     "./src-compiled/**/*.{html,css}",
-    "./src-compiled/main.bundle.js"
+    "./src-compiled/main.bundle.js",
+    "./src-compiled/style/bundle.css"
   ],
   "server": {
     "baseDir": "./src-compiled",
