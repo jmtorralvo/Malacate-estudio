@@ -3,28 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "npm run compile && concurrently \"npm run compile:w\" \"npm run foo\" \"lite-server\" \"npm run server\"",
+    "start": "concurrently \"npm run compile\" \"npm run compile:w\"",
     "prestart": "npm run clean",
-    "server": "cd server && npm start",
-    "compile": "concurrently \"npm run babel\" \"npm run sass\" \"npm run copy\" && npm run bundle",
-    "compile:w": "concurrently \"npm run babel:w\" \"npm run sass:w\" \"npm run watch\" \"npm run bundle:w\"",
-    "clean": "rimraf src-compiled",
-    "bundle": "webpack ./src-compiled/main.js ./src-compiled/main.bundle.js",
-    "bundle:w": "webpack ./src-compiled/main.js ./src-compiled/main.bundle.js --watch",
-    "babel": "babel src --out-dir src-compiled",
-    "babel:w": "babel src --out-dir src-compiled --watch",
-    "sass": "node-sass --include-path scss ./src/app/app.component.scss ./src/app/app.component.css",
-    "sass:w": "node-sass --include-path scss ./src/app/app.component.scss ./src/app/app.component.css --watch",
-    "copy": "cpy \"./**/*.*\" \"!./**/*.js\" \"../src-compiled\" --cwd=src --parents",
-    "watch": "npm-watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "compile": "concurrently \"npm run copy\" \"npm run bundle\"",
+    "compile:w": "concurrently \"npm run bundle:w\" \"npm run watch\"",
+    "bundle": "webpack --progress --colors",
+    "bundle:w": "webpack-dev-server --progress --colors --watch --inline",
+    "copy": "cpy \"./src/**/*.html\" \"./dist\" --parents",
+    "watch": "npm-watch"
   },
   "watch": {
     "copy": {
       "patterns": [
         "src"
       ],
-      "extensions": "html,css"
+      "extensions": "html,ttf"
     }
   },
   "babel": {
@@ -44,20 +38,22 @@
   "homepage": "https://github.com/jmtorralvo/Malacate-estudio",
   "devDependencies": {
     "babel-cli": "^6.14.0",
-    "babel-preset-es2015": "^6.14.0",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.18.0",
     "concurrently": "^2.2.0",
     "cpy-cli": "^1.0.1",
     "css-loader": "^0.26.1",
     "extract-text-webpack-plugin": "^1.0.1",
-    "lite-server": "^2.2.2",
+    "file-loader": "^0.9.0",
     "node-sass": "^4.0.0",
-    "nodemon": "^1.11.0",
     "npm-watch": "^0.1.6",
     "resolve-url-loader": "^1.6.1",
     "rimraf": "^2.5.4",
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.14.0"
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
     "angular": "1.5.8",
