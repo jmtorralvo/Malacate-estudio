@@ -3,5 +3,5 @@ require("bootstrap-grid");
 
 import AppModule from './app/app.module';
 
-
-angular.bootstrap(document, [AppModule]);
+angular.bootstrap(document, [AppModule]); 
+ 

@@ -1,15 +1,13 @@
-// require("./app.component.css");
-//require('!css-loader!resolve-url-loader!sass-loader?sourceMap!./app.component.scss');
+require("./app.component.scss");
 
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
-/*import bootstrap from 'bootstrap-sass';*/
+import uiRouter from 'angular-ui-router'; 
 
 import AppRoutesConfig from './app.routes.js';
 import HeaderModule from './modules/header/header.module';
 
 
-import AppComponent from './app.component';
+import AppComponent from './app.component'; 
 
 
 const AppModule = angular

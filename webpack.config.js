@@ -3,37 +3,43 @@ var webpack = require("webpack");
 var path = require('path');
 
 module.exports = {
+  entry: "./src/main.js",
   output: {
-    sourceMapFilename: "[file].map"
+    path: __dirname,
+    filename: "./dist/bundle.js"
   },
   module: {
     loaders: [
       {
         test: /\.css$/,
         loaders: ['style-loader', 'css-loader', 'resolve-url-loader']
-      }, {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015']
+        }
+      },
+      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
+      {
+          test: /\.scss$/,
+          loader: ExtractTextPlugin.extract('css!sass')
       }
-      // ,
-      // {
-      //     test: /\.scss$/,
-      //     loader: ExtractTextPlugin.extract('css!sass')
-      // }
     ]
-  }
-  // ,
-  // sassLoader: {
-  //     includePaths: [path.resolve(__dirname, "./src/app")]
-  // }
-  ,
+  },
+  devServer: { 
+    inline: true 
+  },
   plugins: [
     new webpack.ProvidePlugin({
       $: "jquery",
       jQuery: "jquery",
       "window.jQuery": "jquery"
     }),
-    new ExtractTextPlugin('style/bundle.css', {
+    new ExtractTextPlugin('dist/style/bundle.css', {
       allChunks: true
     })
   ]
