@@ -1,9 +1,12 @@
 @import './styles/fonts.scss';
 @import './styles/vars.scss';
 @import './styles/footer.scss';
+@import './modules/header/header.scss';
 
 html {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -13,9 +16,20 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border: 3px solid red;
+}
+a{
+  text-decoration: none;
+  color: $black;
+}
+
+#section-home{
+  height: 100%;
+  .main-img{
+    background-image: url("./assets/img/mesita.jpg");  
+  }
 }
 
 .icon{
+  text-decoration: none;
   font-family: malacate;
 }

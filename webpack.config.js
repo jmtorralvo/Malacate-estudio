@@ -25,14 +25,21 @@ module.exports = {
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
       { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
       {
-          test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('css!sass')
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loaders: [
+          'file?hash=sha512&digest=hex&name=dist/public/[hash].[ext]&publicPath=images/&outputPath=dist/public/',
+          'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+        ]
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('css!sass')
       }
     ]
   },
-  devServer: { 
+  devServer: {
     port: 9000,
-    inline: true 
+    inline: true
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -40,7 +47,7 @@ module.exports = {
       jQuery: "jquery",
       "window.jQuery": "jquery"
     }),
-    new ExtractTextPlugin('dist/style/bundle.css', {
+    new ExtractTextPlugin('dist/public/bundle.css', {
       allChunks: true
     })
   ]
