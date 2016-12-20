@@ -53,7 +53,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Base Styles
-	__webpack_require__(13);
+	__webpack_require__(16);
 
 	angular.bootstrap(document, [_app2.default]);
 
@@ -79,19 +79,23 @@
 
 	var _appRoutes2 = _interopRequireDefault(_appRoutes);
 
-	var _header = __webpack_require__(7);
+	var _navigation = __webpack_require__(7);
+
+	var _navigation2 = _interopRequireDefault(_navigation);
+
+	var _header = __webpack_require__(10);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _app = __webpack_require__(10);
+	var _app = __webpack_require__(13);
 
 	var _app2 = _interopRequireDefault(_app);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	__webpack_require__(12);
+	__webpack_require__(15);
 
-	var AppModule = _angular2.default.module('app', [_header2.default, _angularUiRouter2.default]).component('malacateApp', _app2.default).value('EventEmitter', function (payload) {
+	var AppModule = _angular2.default.module('app', [_navigation2.default, _header2.default, _angularUiRouter2.default]).component('malacateApp', _app2.default).value('EventEmitter', function (payload) {
 	    return {
 	        $event: payload
 	    };
@@ -46754,7 +46758,89 @@
 	    value: true
 	});
 
-	var _header = __webpack_require__(8);
+	var _navigation = __webpack_require__(8);
+
+	var _navigation2 = _interopRequireDefault(_navigation);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var NavigationModule = angular.module('navigation', []).component('malacateNavigation', _navigation2.default).value('EventEmitter', function (payload) {
+	    return {
+	        $event: payload
+	    };
+	}).name;
+
+	exports.default = NavigationModule;
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _navigation = __webpack_require__(9);
+
+	var _navigation2 = _interopRequireDefault(_navigation);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var NavigationComponent = {
+	    controller: _navigation2.default,
+	    templateUrl: './app/modules/navigation/navigation.component.html'
+	};
+
+	exports.default = NavigationComponent;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var NavigationController = function () {
+	    function NavigationController(UserSrv, $state) {
+	        _classCallCheck(this, NavigationController);
+
+	        this.open = false;
+	    }
+
+	    _createClass(NavigationController, [{
+	        key: '$onInit',
+	        value: function $onInit() {
+	            console.log('inicio nav');
+	        }
+	    }]);
+
+	    return NavigationController;
+	}();
+
+	NavigationController.$inject = [];
+
+	exports.default = NavigationController;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _header = __webpack_require__(11);
 
 	var _header2 = _interopRequireDefault(_header);
 
@@ -46769,7 +46855,7 @@
 	exports.default = HeaderModule;
 
 /***/ },
-/* 8 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46778,7 +46864,7 @@
 	    value: true
 	});
 
-	var _header = __webpack_require__(9);
+	var _header = __webpack_require__(12);
 
 	var _header2 = _interopRequireDefault(_header);
 
@@ -46786,13 +46872,13 @@
 
 	var HeaderComponent = {
 	    controller: _header2.default,
-	    templateUrl: './app/modules/header/header.template.html'
+	    templateUrl: './app/modules/header/header.component.html'
 	};
 
 	exports.default = HeaderComponent;
 
 /***/ },
-/* 9 */
+/* 12 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -46840,7 +46926,7 @@
 	exports.default = HeaderController;
 
 /***/ },
-/* 10 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46849,7 +46935,7 @@
 	    value: true
 	});
 
-	var _app = __webpack_require__(11);
+	var _app = __webpack_require__(14);
 
 	var _app2 = _interopRequireDefault(_app);
 
@@ -46857,13 +46943,13 @@
 
 	var AppComponent = {
 	    controller: _app2.default,
-	    templateUrl: 'app/app.template.html'
+	    templateUrl: 'app/app.component.html'
 	};
 
 	exports.default = AppComponent;
 
 /***/ },
-/* 11 */
+/* 14 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46901,22 +46987,22 @@
 	exports.default = AppController;
 
 /***/ },
-/* 12 */
+/* 15 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 13 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(14);
+	var content = __webpack_require__(17);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(16)(content, {});
+	var update = __webpack_require__(19)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -46933,10 +47019,10 @@
 	}
 
 /***/ },
-/* 14 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(15)();
+	exports = module.exports = __webpack_require__(18)();
 	// imports
 
 
@@ -46947,7 +47033,7 @@
 
 
 /***/ },
-/* 15 */
+/* 18 */
 /***/ function(module, exports) {
 
 	/*
@@ -47003,7 +47089,7 @@
 
 
 /***/ },
-/* 16 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*

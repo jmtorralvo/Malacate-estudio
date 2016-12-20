@@ -1,7 +1,8 @@
 @import './styles/fonts.scss';
 @import './styles/vars.scss';
 @import './styles/footer.scss';
-@import './modules/header/header.scss';
+@import './modules/navigation/navigation.component.scss';
+@import './modules/header/header.component.scss';
 
 html {
   height: 100%;

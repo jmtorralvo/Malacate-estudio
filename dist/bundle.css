@@ -78,6 +78,7 @@ header {
     font-size: 300px;
     top: 200px; }
   header #nav--icon-hamburguer {
+    z-index: 999;
     top: 12px;
     right: 12px;
     position: fixed;
