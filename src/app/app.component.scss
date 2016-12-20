@@ -1,3 +1,4 @@
+@import '../../node_modules/bootstrap-grid/dist/grid.min.css';
 @import './styles/fonts.scss';
 @import './styles/vars.scss';
 @import './styles/footer.scss';
@@ -5,10 +6,6 @@
 @import './modules/navigation/navigation.component.scss';
 @import './modules/header/header.component.scss';
 
-*{
-  margin: 0;
-  padding: 0;
-}
 
 html {
   height: 100%;

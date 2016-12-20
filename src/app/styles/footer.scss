@@ -1,5 +1,4 @@
 footer {
-  position: absolute;
   background-color: $white;
   height: 137px;
   width: 100%;
@@ -16,6 +15,7 @@ footer {
   }
 
   .footer--icon_list {
+    padding: 0;
     .icon_list-wrapper {
       display: inline;
     }
@@ -38,11 +38,9 @@ footer {
   }
 
   .footer--decorator-line {
-    position: relative;
     background-color: $primary-color;
     height: 10px;
     width: 100%;
-    top: -10px
   }
   a.icon{
      color: $grey-dark;

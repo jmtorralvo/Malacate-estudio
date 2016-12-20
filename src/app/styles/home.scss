@@ -1,15 +1,47 @@
-#section-home{
-//   width: 400%;
-  
-  .subsection{
-      height: 100%;
+#section-home {
+  //   width: 400%;
+
+  .subsection {
+    height: 100%;
   }
 
-  .main-img{
+  .main-img {
     width: 100%;
     height: 600px;
-    background-image: url("./assets/img/mesita.jpg");  
+    margin: 0;
+    background-image: url("./assets/img/mesita.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+  }
+
+  #subsection-services {
+    padding: 25px 0;
+    width: 100%;
+
+    .service-container {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+
+      figure {
+        font-size: 35px;
+        margin-bottom: 12px;
+
+        .icon {
+          margin-bottom: 24px;
+        }
+
+        figcaption {
+          font-size: 22px;
+          font-family: RobotoReg;
+        }
+      }
+
+      p {
+        margin-top: 0;
+        font-size: 15px;
+        font-family: YanReg;
+      }
+    }
   }
 }
