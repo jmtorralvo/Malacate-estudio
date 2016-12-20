@@ -2,12 +2,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require("webpack");
 var path = require('path');
 
-console.log(__dirname)
 module.exports = {
   entry: "./src/main.js",
   output: {
     path: __dirname + '/dist',
-    filename: "./dist/bundle.js"
+    filename: "bundle.js"
   },
   module: {
     loaders: [
@@ -39,8 +38,9 @@ module.exports = {
     ]
   },
   devServer: {
-    port: 9000,
-    inline: true
+    port:9000,
+    inline: true,
+    contentBase: "./dist",
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -48,7 +48,7 @@ module.exports = {
       jQuery: "jquery",
       "window.jQuery": "jquery"
     }),
-    new ExtractTextPlugin('./dist/bundle.css', {
+    new ExtractTextPlugin('bundle.css', {
       allChunks: true
     })
   ]

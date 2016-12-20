@@ -75,9 +75,9 @@
 
 	var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-	var _appRoutes = __webpack_require__(6);
+	var _app = __webpack_require__(6);
 
-	var _appRoutes2 = _interopRequireDefault(_appRoutes);
+	var _app2 = _interopRequireDefault(_app);
 
 	var _navigation = __webpack_require__(7);
 
@@ -87,15 +87,15 @@
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _app = __webpack_require__(13);
+	var _app3 = __webpack_require__(13);
 
-	var _app2 = _interopRequireDefault(_app);
+	var _app4 = _interopRequireDefault(_app3);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	__webpack_require__(15);
 
-	var AppModule = _angular2.default.module('app', [_navigation2.default, _header2.default, _angularUiRouter2.default]).component('malacateApp', _app2.default).value('EventEmitter', function (payload) {
+	var AppModule = _angular2.default.module('app', [_navigation2.default, _header2.default, _angularUiRouter2.default]).config(_app2.default).component('malacateApp', _app4.default).value('EventEmitter', function (payload) {
 	    return {
 	        $event: payload
 	    };
@@ -46739,9 +46739,10 @@
 	function config($stateProvider, $urlRouterProvider) {
 	    $stateProvider.state('home', {
 	        url: '/home',
-	        //We must tu pass $event argument to callback function if we use EventEmitter.
-	        /*            template: `<bk-login on-user-modified="$ctrl.userModified($event);"></bk-login>`*/
-	        component: 'bkLogin' // toDo: How pass parent controller callback to a component in ui-routes
+	        templateUrl: './app/sections/home.html'
+	    }).state('works', {
+	        url: '/works',
+	        templateUrl: './app/sections/works.html'
 	    });
 	    $urlRouterProvider.otherwise('/home');
 	}

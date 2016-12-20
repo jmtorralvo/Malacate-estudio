@@ -5,7 +5,7 @@ class NavigationController {
     $onInit() {
        console.log(this);
        console.log(this.open);
-       console.log('NavigationController3'); 
+       console.log('NavigationController5'); 
     }
 
 }

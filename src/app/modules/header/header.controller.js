@@ -9,14 +9,14 @@ class HeaderController {
 
     toggleNav(){
         this.open = !this.open;
-        this.onChangeNav();
+        this.onChangeNav();  
     }
 
     /// ToDo: Ojo como se pasa el arg
-    userModified({ user }) {
+    userModified({ user }) { 
        
-    }
-}
+    }  
+} 
 
 HeaderController.$inject = [];
 
