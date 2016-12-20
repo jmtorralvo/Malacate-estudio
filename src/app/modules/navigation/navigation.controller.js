@@ -1,10 +1,11 @@
 class NavigationController {
-
-    constructor(UserSrv, $state) {
-        this.open = false;
-    }
+    constructor(UserSrv, $state, $scope) {
+        this.scope = $scope;
+    } 
     $onInit() {
-       
+       console.log(this);
+       console.log(this.open);
+       console.log('NavigationController3'); 
     }
 
 }

@@ -1,12 +1,15 @@
-<malacate-navigation>
+<malacate-navigation open="$ctrl.navOpened">
 </malacate-navigation>
-<malacate-header>
+<malacate-header on-change-nav="$ctrl.toggleNav()" open="$ctrl.navOpened">
 </malacate-header>
 
-<section id="section-home">
+<!--<section id="section-home">
     <figure class="main-img">
     </figure>
-</section>
+</section>-->
+
+<div ui-view id="main-view"></div>
+
 
 <footer>
   <div class="footer--wrapper-center">

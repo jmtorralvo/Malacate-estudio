@@ -1,5 +1,5 @@
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
 
@@ -21,7 +21,7 @@ header {
     right: 0;
     text-align: center;
     font-size:300px;
-    top:200px;
+    top:200px; 
 
     #logo {}
   }

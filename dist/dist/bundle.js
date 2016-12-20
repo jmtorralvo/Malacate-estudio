@@ -46779,7 +46779,7 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	    value: true
+	   value: true
 	});
 
 	var _navigation = __webpack_require__(9);
@@ -46789,8 +46789,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var NavigationComponent = {
-	    controller: _navigation2.default,
-	    templateUrl: './app/modules/navigation/navigation.component.html'
+	   bindings: {
+	      open: '='
+	   },
+	   controller: _navigation2.default,
+	   templateUrl: './app/modules/navigation/navigation.component.html'
 	};
 
 	exports.default = NavigationComponent;
@@ -46810,16 +46813,18 @@
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var NavigationController = function () {
-	    function NavigationController(UserSrv, $state) {
+	    function NavigationController(UserSrv, $state, $scope) {
 	        _classCallCheck(this, NavigationController);
 
-	        this.open = false;
+	        this.scope = $scope;
 	    }
 
 	    _createClass(NavigationController, [{
 	        key: '$onInit',
 	        value: function $onInit() {
-	            console.log('inicio nav');
+	            console.log(this);
+	            console.log(this.open);
+	            console.log('NavigationController3');
 	        }
 	    }]);
 
@@ -46872,6 +46877,10 @@
 
 	var HeaderComponent = {
 	    controller: _header2.default,
+	    bindings: {
+	        open: '=',
+	        onChangeNav: '&'
+	    },
 	    templateUrl: './app/modules/header/header.component.html'
 	};
 
@@ -46894,10 +46903,6 @@
 	var HeaderController = function () {
 	    function HeaderController(UserSrv, $state) {
 	        _classCallCheck(this, HeaderController);
-
-	        /*this.$state = $state;
-	        this.UserSrv = UserSrv;*/
-	        this.open = false;
 	    }
 
 	    _createClass(HeaderController, [{
@@ -46907,6 +46912,7 @@
 	        key: "toggleNav",
 	        value: function toggleNav() {
 	            this.open = !this.open;
+	            this.onChangeNav();
 	        }
 
 	        /// ToDo: Ojo como se pasa el arg
@@ -46967,11 +46973,22 @@
 	        _classCallCheck(this, AppController);
 
 	        this.$state = $state;
+	        this.navOpened = false;
 	    }
 
 	    _createClass(AppController, [{
 	        key: '$onInit',
 	        value: function $onInit() {}
+	    }, {
+	        key: 'toggleNav',
+	        value: function toggleNav() {
+	            this.navOpened = !this.navOpened;
+	        }
+	    }, {
+	        key: 'foo',
+	        value: function foo() {
+	            alert('foo');
+	        }
 	    }, {
 	        key: 'userModified',
 	        value: function userModified(_ref) {

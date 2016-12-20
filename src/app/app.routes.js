@@ -4,9 +4,11 @@ function config($stateProvider, $urlRouterProvider) {
     $stateProvider
         .state('home', {
             url: '/home',
-            //We must tu pass $event argument to callback function if we use EventEmitter.
-/*            template: `<bk-login on-user-modified="$ctrl.userModified($event);"></bk-login>`*/
-            component: 'bkLogin' // toDo: How pass parent controller callback to a component in ui-routes
+            templateUrl: './app/sections/home.html'
+        })
+        .state('works', {
+            url: '/works',
+            templateUrl: './app/sections/works.html'
         })
     $urlRouterProvider.otherwise('/home'); 
 }

@@ -1,3 +1,10 @@
-<nav class="navigation-display">
-   Navigation componet
+<nav class="navigation-container" ng-class="$ctrl.open ? 'open' : 'close'">
+   <ul class="navmenu-wrapper">
+       <li class="navmenu-option-wraper"><a ui-sref="home">Home</a></li>
+       <li class="navmenu-option-wraper"><a ui-sref="works">Trabajos</a></li>
+       <!--<li class="navmenu-option-wraper"><a ui-sref="">Option 3</a></li>
+       <li class="navmenu-option-wraper"><a ui-sref="">Option 4</a></li>
+       <li class="navmenu-option-wraper"><a ui-sref="">Option 5</a></li>
+       <li class="navmenu-option-wraper"><a ui-sref="">Option 6</a></li>-->
+   </ul>
 </nav>

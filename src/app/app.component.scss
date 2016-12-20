@@ -1,13 +1,17 @@
 @import './styles/fonts.scss';
 @import './styles/vars.scss';
 @import './styles/footer.scss';
+@import './styles/home.scss';
 @import './modules/navigation/navigation.component.scss';
 @import './modules/header/header.component.scss';
 
-html {
-  height: 100%;
+*{
   margin: 0;
   padding: 0;
+}
+
+html {
+  height: 100%;
 }
 
 body {
@@ -15,22 +19,24 @@ body {
   height: 100%;
   min-height: 100%;
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
+
+#main-view{
+  height: 100%;
+  width: 100%;
+}
+
+
 a{
   text-decoration: none;
   color: $black;
 }
 
-#section-home{
-  height: 100%;
-  .main-img{
-    background-image: url("./assets/img/mesita.jpg");  
-  }
-}
-
 .icon{
   text-decoration: none;
   font-family: malacate;
+}
+
+.no-display{
+  display: none !important;
 }

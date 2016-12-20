@@ -1,17 +1,15 @@
 class HeaderController {
 
     constructor(UserSrv, $state) {
-        /*this.$state = $state;
-        this.UserSrv = UserSrv;*/
-        this.open = false;
     }
+    
     $onInit() {
        
     }
 
     toggleNav(){
         this.open = !this.open;
-
+        this.onChangeNav();
     }
 
     /// ToDo: Ojo como se pasa el arg
