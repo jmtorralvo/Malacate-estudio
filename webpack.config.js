@@ -5,8 +5,8 @@ var path = require('path');
 module.exports = {
   entry: "./src/main.js",
   output: {
-    path: __dirname,
-    filename: "./dist/bundle.js"
+    path: path.resolve(__dirname, 'dist'),
+    filename: "./bundle.js"
   },
   module: {
     loaders: [
@@ -23,11 +23,11 @@ module.exports = {
         }
       },
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
+      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader?name=assets/[hash].[ext]" },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
         loaders: [
-          'file?hash=sha512&digest=hex&name=dist/public/[hash].[ext]&publicPath=images/&outputPath=dist/public/',
+          'file?hash=sha512&digest=hex&name=assets/[hash].[ext]',
           'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       },
@@ -47,7 +47,7 @@ module.exports = {
       jQuery: "jquery",
       "window.jQuery": "jquery"
     }),
-    new ExtractTextPlugin('dist/public/bundle.css', {
+    new ExtractTextPlugin('./bundle.css', {
       allChunks: true
     })
   ]

@@ -1,6 +1,6 @@
 @font-face {
   font-family: HindLight;
-  src: url(40af9bedb52f7e83368e99a77a125463.ttf); }
+  src: url(assets/40af9bedb52f7e83368e99a77a125463.ttf); }
 
 /*@font-face {
     font-family: malacate;
@@ -156,7 +156,7 @@ a {
 #section-home {
   height: 100%; }
   #section-home .main-img {
-    background-image: url(43f7d22d98058e3810538bdd234589e4.jpg); }
+    background-image: url(assets/9b885394a86edfe296a3f20a11b1d714.jpg); }
 
 .icon {
   text-decoration: none;
