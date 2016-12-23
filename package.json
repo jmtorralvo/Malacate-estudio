@@ -9,7 +9,7 @@
     "compile": "concurrently \"npm run copy\" \"npm run bundle\"",
     "compile:w": "concurrently \"npm run bundle:w\" \"npm run watch\"",
     "bundle": "webpack --progress --colors",
-    "bundle:w": "webpack-dev-server --progress --colors --watch --inline",
+    "bundle:w": "webpack-dev-server --progress --colors --watch --inline --open",
     "copy": "cpy \"./**/*.html\" \"../dist\" --cwd=src --parents",
     "watch": "npm-watch"
   },
