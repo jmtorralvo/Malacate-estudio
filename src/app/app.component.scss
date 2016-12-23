@@ -5,6 +5,7 @@
 @import './styles/home.scss';
 @import './modules/navigation/navigation.component.scss';
 @import './modules/header/header.component.scss';
+@import './modules/grid/grid.component.scss';
 
 
 html {
@@ -12,7 +13,7 @@ html {
 }
 
 body {
-  position: relative;
+  position: relative; 
   height: 100%;
   min-height: 100%;
   box-sizing: border-box;

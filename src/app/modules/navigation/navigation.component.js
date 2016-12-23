@@ -1,3 +1,4 @@
+//require('./navigation.component.scss');
 import controller from './navigation.controller';
 
 const NavigationComponent = {

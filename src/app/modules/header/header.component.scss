@@ -1,5 +1,4 @@
 header {
-  position: fixed;
   top: 0;
   width: 100%;
 
@@ -8,15 +7,15 @@ header {
   }
 
   .header--wrapper-left {
-    position: relative;
-    top: 12px;
+    position: fixed;
+    top: 12px; 
     left: 12px;
     display: block;
     font-size: 20px;
   }
 
   .header--wrapper-center {
-    position: absolute;
+    position: absolute; 
     left: 0;
     right: 0;
     text-align: center;

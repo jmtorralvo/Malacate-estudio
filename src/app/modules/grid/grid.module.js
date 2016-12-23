@@ -1,5 +1,6 @@
 import GridComponent from './grid.component';
 
+
 const GridModule = angular
     .module('grid', [])
     .component('malacateGrid', GridComponent)

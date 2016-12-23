@@ -1,3 +1,4 @@
+//require('./header.component.scss');
 import controller from './header.controller';
 
 const HeaderComponent = {

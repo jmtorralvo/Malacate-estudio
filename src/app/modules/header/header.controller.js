@@ -1,10 +1,16 @@
-class HeaderController {
+import Parallux from 'parallux';
 
-    constructor(UserSrv, $state) {
+class HeaderController {
+    constructor() {
+    'ngInject';
     }
     
     $onInit() {
-       
+       //new Parallux(document.querySelector('#logo'));
+        var elems = document.querySelectorAll('.parallux-container');
+        for (var i = 0, l = elems.length; i < l; i++) {
+            new Parallux(elems[i]);
+        }
     }
 
     toggleNav(){
@@ -16,7 +22,7 @@ class HeaderController {
     userModified({ user }) { 
        
     }  
-} 
+}  
 
 HeaderController.$inject = [];
 

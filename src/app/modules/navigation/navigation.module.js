@@ -1,5 +1,6 @@
 import NavigationComponent from './navigation.component';
 
+/** @ngInject */
 const NavigationModule = angular
     .module('navigation', [])
     .component('malacateNavigation', NavigationComponent)

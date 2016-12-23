@@ -1,11 +1,11 @@
+
 class NavigationController {
     constructor(UserSrv, $state, $scope) {
+        'ngInject';
         this.scope = $scope;
     } 
     $onInit() {
-       console.log(this);
-       console.log(this.open);
-       console.log('NavigationController5'); 
+       
     }
 
 }

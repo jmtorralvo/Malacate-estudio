@@ -1,6 +1,5 @@
-/* jshint esversion:6 */
-
 function config($stateProvider, $urlRouterProvider) {
+    'ngInject';
     $stateProvider
         .state('home', {
             url: '/home',

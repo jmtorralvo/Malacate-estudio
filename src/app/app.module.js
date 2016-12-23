@@ -1,5 +1,3 @@
-require("./app.component.scss");
-
 import angular from 'angular';
 import uiRouter from 'angular-ui-router'; 
 
@@ -11,8 +9,9 @@ import GridModule from './modules/grid/grid.module';
 
 import AppComponent from './app.component'; 
 
-
+/** @ngInject */
 const AppModule = angular
+
     .module('app', [NavigationModule, HeaderModule, GridModule, uiRouter])
     .config(AppRoutesConfig)
     .component('malacateApp', AppComponent)

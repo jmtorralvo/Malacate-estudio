@@ -1,7 +1,9 @@
 /* jshint esversion:6 */
 
+
 class Login {
     constructor(LoginSrv, UserSrv, EventEmitter, $state, $http) {
+        'ngInject';
         this.user = '';
         this.pass = '';
 

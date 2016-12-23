@@ -1,3 +1,5 @@
+require("./app.component.scss");
+
 import controller from './app.controller';
 
 const AppComponent = {
