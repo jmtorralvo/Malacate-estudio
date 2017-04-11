@@ -1,4 +1,4 @@
-import Parallux from 'parallux';
+/*import Parallux from 'parallux';*/
 
 class HeaderController {
     constructor() {
@@ -7,10 +7,10 @@ class HeaderController {
     
     $onInit() {
        //new Parallux(document.querySelector('#logo'));
-        var elems = document.querySelectorAll('.parallux-container');
+       /* var elems = document.querySelectorAll('.parallux-container');
         for (var i = 0, l = elems.length; i < l; i++) {
             new Parallux(elems[i]);
-        }
+        }*/
     }
 
     toggleNav(){

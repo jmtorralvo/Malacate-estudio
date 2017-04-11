@@ -1,4 +1,4 @@
-import Masonry from 'masonry-layout';
+/*import Masonry from 'masonry-layout';*/
 
 class GridController {
 
